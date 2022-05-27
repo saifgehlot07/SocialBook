@@ -115,7 +115,7 @@ nav .container {
   align-items: center;
 }
 
-nav .search-bar {
+.search-bar {
   background-color: var(--color-light);
   padding: var(--search-padding);
   border-radius: var(--border-radius);
@@ -125,7 +125,7 @@ nav .search-bar {
   -o-border-radius: var(--border-radius);
 }
 
-nav .search-bar input[type="search"] {
+.search-bar input[type="search"] {
   background: transparent;
   width: 30vw;
   margin-left: 1rem;
@@ -160,7 +160,7 @@ main .container {
 
 main .container .left {
   height: max-content;
-  position: relative;
+  position: sticky;
   top: var(--sticky-top-left);
 }
 
@@ -446,4 +446,104 @@ main .container .left .profile {
 }
 
 .middle .feed .action-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+  margin: 0.6rem;
+}
+
+.middle .liked-by {
+  display: flex;
+}
+
+.middle .liked-by span {
+  width: 1.4rem;
+  height: 1.4rem;
+  display: block;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--color-white);
+  margin-left: -0.6rem;
+}
+
+.middle .liked-by span:first-child {
+  margin: 0;
+}
+
+.middle .liked-by p {
+  margin-left: 0.5rem;
+}
+
+/* right */
+
+.container .right {
+  position: sticky;
+  margin-top: 5.4rem;
+  top: var(--sticky-top-right);
+  height: max-content;
+  bottom: 0;
+}
+
+.right .masseges {
+  background-color: var(--color-white);
+  border-radius: var(--card-border-radius);
+  -webkit-border-radius: var(--card-border-radius);
+  -moz-border-radius: var(--card-border-radius);
+  -ms-border-radius: var(--card-border-radius);
+  -o-border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+}
+
+.right .masseges .heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.right .masseges i {
+  font-size: 1.4rem;
+}
+
+.right .masseges .search-bar {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.right .masseges .category {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.right .masseges .category h6 {
+  width: 100%;
+  text-align: center;
+  border-bottom: 4px solid var(--color-light);
+  padding-bottom: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.right .masseges .category .active {
+  border-color: var(--color-dark);
+}
+
+.right .masseges .massege {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: start;
+}
+
+.right .masseges .massege:last-child {
+  margin: 0;
+}
+
+.right .masseges .massege p {
+  font-size: 0.8rem;
 }
